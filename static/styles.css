@@ -1,0 +1,1124 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+
+
+
+html {
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+.contenedor_cliente {
+    max-width: 120rem;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background-color: var(--blanco);
+
+}
+
+.contenedor-graficos { 
+    max-width: 120rem;
+    margin: 0 auto 2rem;
+    padding: 2rem 0 5rem 0;
+    background-color: var(--grisClaro);
+}
+
+.contenedor-graficos p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--secundario);
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/** Productos cliente.html **/
+
+.productos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+.product p {
+    line-height: 2;
+}
+
+.product .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proveedor {
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+
+.hero .titulo {
+    color: var(--primario);
+    font-weight: bold;
+}
+
+.titulo span {
+    font-size: 2.5rem;
+}
+
+.hero {
+    background-image: url(imagenes/fondo-inicio.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 41rem;
+    padding: 2rem;
+    position: relative;
+    border: 3px solid var(--blanco);
+}
+.portada-impresoras {
+    background-image: url(imagenes/imagen_impresoras.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 41rem;
+    padding: 2rem;
+    position: relative;
+    margin-top: 1.5rem;
+    border: 3px solid var(--oscuro);
+}
+
+.portada-consolas{
+    background-image: url(imagenes/fondo-consolas.avif);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 41rem;
+    padding: 2rem;
+    position: relative;
+    margin-top: 1.5rem;
+    border: 3px solid var(--oscuro);
+}
+
+.portada-arduinos {
+    background-image: url(imagenes/fondo-arduino.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 41rem;
+    padding: 2rem;
+    position: relative;
+    margin-top: 1.5rem;
+    border: 3px solid var(--oscuro);
+}
+
+.portada-raspberrys {
+    background-image: url(imagenes/fondo-raspberrys.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 41rem;
+    padding: 2rem;
+    position: relative;
+    margin-top: 1.5rem;
+    border: 3px solid var(--oscuro);
+}
+
+.portada-carrito {
+    background-image: url(imagenes/fondo-carrito.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 41rem;
+    padding: 2rem;
+    position: relative;
+    margin-top: 1.5rem;
+    border: 3px solid var(--oscuro);
+}
+
+.portada-solicitudes {
+    background-image: url(imagenes/fondo-solicitudes.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 41rem;
+    padding: 2rem;
+    position: relative;
+    margin-top: 1.5rem;
+    border: 3px solid var(--oscuro);
+}
+
+
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0,0,0,.6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido-portada-impresoras {
+    position: absolute;
+    background-color: rgba(255,255,255,.3);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-portada-consolas {
+    position: absolute;
+    background-color: rgba(255,255,255,.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-portada-arduinos {
+    position: absolute;
+    background-color: rgba(255,255,255,.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-portada-raspberrys {
+    position: absolute;
+    background-color: rgba(255,255,255,.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-portada-carrito {
+    position: absolute;
+    background-color: rgba(255,255,255,.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-portada-solicitudes {
+    position: absolute;
+    background-color: rgba(255,255,255,.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-hero .titulo {
+    font-size: 6rem;
+}
+
+.contenido-portada-impresoras .titulo {
+    font-size: 6rem;
+}
+
+.contenido-portada-consolas .titulo {
+    font-size: 6rem;
+}
+
+.contenido-portada-arduinos .titulo {
+    font-size: 6rem;
+}
+
+.contenido-portada-raspberrys .titulo {
+    font-size: 6rem;
+}
+
+.contenido-portada-carrito .titulo {
+    font-size: 6rem;
+
+}
+
+.contenido-portada-solicitudes .titulo {
+    font-size:  6rem;
+}
+
+
+.contenido-hero .logos {
+    height:40rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido-portada-impresoras .logos {
+    height:40rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido-portada-consolas .logos {
+    height:40rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido-portada-arduinos .logos {
+    height:40rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido-portada-raspberrys .logos {
+    height:40rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido-portada-carrito .logos {
+    height:40rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido-portada-solicitudes .logos {
+    height:40rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sombra {
+    -webkit-box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+    border-radius: 1rem;
+}
+
+/** CONTACTO **/
+.formulario {
+    background-color: var(--oscuro);
+    width: min(60rem, 100%); /** UTILIZA SIEMPRE EL VALOR MAS PEQUENO **/;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+
+}
+
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-campos {
+    margin-bottom: 3rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-texto {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+.boton-retroceder {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: .8rem 2.7rem .8rem 2.7rem;
+    margin-left: 22rem;
+    font-size: 2rem;
+    text-decoration:none;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+
+@media (min-width:768px) {
+    .boton {
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+
+.hipervinculo {
+    margin-top: 3rem;
+    color: var(--blanco);
+}
+.hipervinculo a {
+    color: var(--secundario);
+}
+
+.final {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-decoration: underline;
+}
+
+.superior {
+    display: flex;
+    justify-content: right;
+
+}
+.contenido-superior {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.icono {
+    justify-content: center;
+}
+
+.volver {
+    display: flex;
+}
+
+.retorno {
+    display: flex;
+    margin-right: 103rem;
+}
+
+.volver_solicitudes {
+    display: flex;
+    margin-right: 130rem;
+    border-radius: .5rem;
+}
+
+.volver_suministros {
+    display: flex;
+    margin-right: 130rem;
+    padding: .6rem;
+    background-color: #007bff;
+    color: var(--oscuro);
+    border-radius: .5rem;
+    
+}
+.volver_suministros:hover {
+    color:var(--blanco);
+    text-decoration: underline;
+}
+
+.alinear_derecha {
+    margin-right: 2rem;
+}
+
+.boton-retorno {
+    margin: auto;
+    text-decoration: none;
+    color: var(--oscuro);
+    margin-right: .5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.boton-retorno:hover {
+    color:var(--blanco);
+}
+.salir:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.carrito {
+    display: flex;
+    margin-right: 3.5rem;
+}
+
+.boton-carrito {
+    margin: auto;
+    text-decoration: none;
+    color: var(--grisClaro);
+    margin-right: .5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.boton-carrito:hover {
+    color: var(--oscuro);
+}
+
+.perfil {
+    display: flex;
+}
+
+.boton-perfil {
+    margin:auto;
+    text-decoration: none;
+    color: red;
+    margin-right: .5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.boton-perfil:hover {
+    color: var(--oscuro);
+}
+
+/** Barra de Navegacion principal **/
+
+.navegacion-ppal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contenedor {
+    width: 100rem;
+    margin: 2rem auto 2rem auto;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-ppal a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.navegacion-ppal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
+
+/** PAGINA IMPRESORA PRODUCTOS **/
+
+
+
+.titulo-ppal {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.producto {
+    margin: 1.5rem;
+    border: 4px solid black;
+    background-color: var(--blanco);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.producto:before {
+    content: 'Nuevo';
+    background-color: var(--secundario);
+    padding: 1rem 1.85rem ;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    transform: rotate(-90deg);
+    color: var(--blanco);
+}
+
+.img__producto {
+    width: 100%;
+}
+
+.titulo_producto {
+    text-align: center;
+
+}
+
+.precio_producto {
+    color: #F7971E;
+    font-weight: bold;
+    
+}
+
+.logo_carrito {
+    display: block;
+    margin: 2rem auto;
+}
+
+.btn-info-producto {
+    display: inline;
+    margin-left: 33rem;
+    text-decoration: underline;
+    color: var(--secundario);
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+.btn-info-producto:hover {
+    color: var(--oscuro);
+    
+}
+
+
+/** DISENO PAGINAS ARTICULOS **/
+
+.img_articulo {
+    border: 4px solid black;
+
+}
+
+.precio-articulo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--secundario);
+}
+
+
+.boton-imagen{
+    margin: 1.5rem;
+    height:100px;
+    width:100px;
+    border-radius: 1.5rem;
+ }
+
+/** IMPRESORA 1 **/
+
+.imagen1 {
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_1/Ender6-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.imagen2 {
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_1/Ender6-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.imagen3 {
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_1/Ender6-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+/** IMPRESORA 2 **/
+
+.impresora2-1{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_2/impresora2-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.impresora2-2{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_2/impresora2-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.impresora2-3{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_2/impresora2-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+/** IMPRESORA 3 **/
+
+.impresora3-1{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_3/impresora3-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.impresora3-2{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_3/impresora3-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.impresora3-3{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_3/impresora3-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+/** IMPRESORA 4 **/
+
+.impresora4-1{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_4/impresora4-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.impresora4-2{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_4/impresroa4-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.impresora4-3{
+    background-image: url(/static/imagenes/miniaturas/IMPRESORAS/impresora_4/impresora4-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.arduinor3{
+    background-image: url(/static/imagenes/miniaturas/ARDUINOS/arduinor3/arduinor3-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+.arduino-leo-1{
+    background-image: url(/static/imagenes/miniaturas/ARDUINOS/arduino-leonardo/arduino-leonardo-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.arduino-leo-2{
+    background-image: url(/static/imagenes/miniaturas/ARDUINOS/arduino-leonardo/arduino-leonardo-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+.arduino-due-1 {
+    background-image: url(/static/imagenes/miniaturas/ARDUINOS/arduino-due/arduino-due-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+.arduino-nano-1 {
+    background-image: url(/static/imagenes/miniaturas/ARDUINOS//arduino-nano/arduino-nano-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.arduino-nano-2 {
+    background-image: url(/static/imagenes/miniaturas/ARDUINOS/arduino-nano/arduino-nano-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+.arduino-nano-3 {
+    background-image: url(/static/imagenes/miniaturas/ARDUINOS/arduino-nano/arduino-nano-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+/** RASPBERRY PI 1 **/
+
+.raspberry-pi1-1 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi1/rasapberry-pi1-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.raspberry-pi1-2 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi1/raspberry-pi1-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+.raspberry-pi1-3 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi1/raspberry-pi1-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+/** RASPBERRY PI 2 **/
+
+.raspberry-pi2-1 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi2/raspberry-pi2-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.raspberry-pi2-2 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi2/raspberry-pi2-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+.raspberry-pi2-3 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi2/raspberry-pi2-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+/** RASPBERRY PI 3 **/
+
+.raspberry-pi3-1 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi3/raspberry-pi3-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.raspberry-pi3-2 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi3/raspberry-pi3-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+/** RASPBERRY PI 4 **/
+
+.raspberry-pi4-1 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi4/rasp\ pi4-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.raspberry-pi4-2 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi4/rasp\ pi4-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.raspberry-pi4-3 {
+    background-image: url(/static/imagenes/miniaturas/RASPBERRYS/raspberrys-pi4/rasp-pi4-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+/** PS5 **/
+
+.ps5-1 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/ps5/ps5-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.ps5-2 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/ps5/ps5-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.ps5-3 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/ps5/ps5-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+/** SWITCH **/
+
+.switch-1 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/switch/switch-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.switch-2 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/switch/switch-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+/** STEAMDECK **/
+
+.steamdeck-1 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/steam-deck/steamdeck-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.steamdeck-2 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/steam-deck/steamdeck-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+
+/** XBOX **/
+
+.xbox-1 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/xbox/xbox-1.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.xbox-2 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/xbox/xbox-2.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+.xbox-3 {
+    background-image: url(/static/imagenes/miniaturas/CONSOLAS/xbox/xbox-3.jpg);
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+
+.container {
+    display: block;
+    width: 35%;
+    margin: initial;
+    margin-left: 6rem;
+    margin-top: 3rem;
+}
+
+.container2 {
+    display: block;
+    width: 35%;
+    margin: initial;
+    margin-left: 6rem;
+    margin-top: 3rem;
+    border: 4px solid black;
+    background-color: var(--blanco);
+    border-radius: 1.9rem;
+}
+
+.parte-pedidos {
+    display: grid;
+    grid-template-columns: 35% auto;
+    margin-bottom: 4rem;
+    border: 1px solid black;
+    padding: 3rem 0 3rem 3rem;
+    background-color: var(--primario);
+    border-radius: 1.5rem;
+    
+} 
+
+
+.titulo-pedido {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.btn-pedido {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+.btn-pedido:hover {
+    color: var(--oscuro);
+    background-color: var(--blanco);
+}
+
+.card {
+    margin-top: 5rem;
+    margin-left: .4rem;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.boton_consulta {
+    margin-top: 2rem;
+    margin-left: 1.1rem;
+}
+.boton_consulta:hover {
+    cursor: pointer;
+    color: var(--blanco);
+}
+
+
+.titulo_proveedor {
+    text-align: center;
+    font-size: 3.8rem;
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 5rem;
+    font-weight: bold;
+}
+
+.titulo_proveedor span {
+    font-size: 2.5rem;
+}
+
+.btn_tramitar_pedido {
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    text-align: right;
+    margin-left: 119rem;
+}
+
+.total_pedido {
+    padding: 1rem;
+    background-color: var(--gris);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primario);
+}
+
+.btn_solicitudes {
+
+    display: grid;
+    grid-template-columns: 35% auto;
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-bottom: 4rem;
+    border: 3px solid black;
+    padding: 3rem 0 3rem 3rem;
+    background-color: var(--secundario);
+    border-radius: 1.5rem;
+    font-size: 20px;
+}
+
+
+/** CSS para los graficos de barras **/
+
+.grafico_cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 50%;
+}
