@@ -1,0 +1,61 @@
+{% include 'header_solicitudes.html' %}
+<br>
+{% with messages= get_flashed_messages() %}
+
+    {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for message in  messages %}
+                {{ message }}
+            {% endfor %}    
+        </div>
+    {% endif %}
+
+    {% endwith %}
+        
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Coste de produccion</th>
+                    <th>Unidades</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in articulos %}
+                <tr>
+                    <td>
+                        <img clas="img-thumbnail" width="100" src="uploads/{{c[5] }}" alt="">
+                    </td>
+                    <td>{{c[1] }}</td>
+                    <td>{{c[2] }}&nbsp;€</td>
+                    <td>{{c[3] }}&nbsp;€</td>
+                    <td>{{c[6] }}</td>
+                    <td>
+                        <a onclick="return confirm(' Enviar el stock solicitado del articulo?')" class="btn btn-success" href="/enviar_solicitud_articulo/{{c[0] }}">Enviar</a> |
+                        <a onclick="return confirm(' Eliminar la peticion de stock?')" class="btn btn-danger" href="/eliminar_solicitud_articulo/{{c[0] }}">Eliminar</a>
+                    </td>
+                </tr>
+                
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        {% for p in precio_total %}
+        <div data-name="Subtotals" class="a-row a-spacing-mini sc-subtotal sc-subtotal-activecart sc-java-remote-feature total_pedido">
+            <span id="sc-subtotal-label-activecart" class="a-size-medium sc-number-of-items">Subtotal ganancias:</span>
+            <span id="sc-subtotal-amount-activecart" class="a-color-price sc-price-container a-text-bold">&nbsp;<span class="a-size-medium a-color-base sc-price sc-white-space-nowrap">{{p}}&nbsp;€</span></span>       
+            </div>
+        {% endfor %}
+
+        {% for p in coste_produccion %}
+        <div data-name="Subtotals" class="a-row a-spacing-mini sc-subtotal sc-subtotal-activecart sc-java-remote-feature total_pedido">
+            <span id="sc-subtotal-label-activecart" class="a-size-medium sc-number-of-items">Subtotal costes:</span>
+            <span id="sc-subtotal-amount-activecart" class="a-color-price sc-price-container a-text-bold">&nbsp;<span class="a-size-medium a-color-base sc-price sc-white-space-nowrap">{{p}}&nbsp;€</span></span>       
+            </div>
+        {% endfor %}
+
+
+{% include 'footer_carrito.html' %}

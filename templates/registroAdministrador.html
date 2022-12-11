@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" class="proveedor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="static/normalize.css" as="style">
+    <link href="static/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Proyecto Final [REGISTRO-ADMIN]</title>
+    <!-- Nuestro CSS -->
+    <link rel="preload" href="static/styles.css" as="style">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+<body class="proveedor">
+    <header>
+        <h1 class="titulo">Proyecto Final <span>David Padilla Muñoz</span></h1>
+    </header>
+
+    <main>
+        <form action='/registrar_admin' method="post" class="formulario sombra">
+                <fieldset>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            {{ form.nombre.label }}
+                            {{ form.nombre(class='input-texto')}}
+                        </div>
+
+                        <div class="campo">
+                            {{ form.edad.label }}
+                            {{ form.edad(class='input-texto') }}
+                        </div>
+
+                        <div class="campo">
+                            {{ form.email.label }}
+                            {{ form.email(class='input-texto') }}
+                        </div>
+
+                        <div class="campo">
+                            {{ form.contrasenia.label }}
+                            {{ form.contrasenia(class='input-texto') }}
+                        </div>
+                        <div class="campo">
+                            {{ form.confirmar.label }}
+                            {{ form.confirmar(class='input-texto') }}
+                        </div>
+                    </div> <!-- .contenedor-campos-->    
+                    <div>
+                        <button type="submit" class="boton"> Registrarme </button>
+                        <a class="boton-retroceder" href="/">Volver</a>
+                    </div>
+                </fieldset>
+        </form>
+    </main>
+
+    <footer class="final">
+        <p>Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

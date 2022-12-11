@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="static/normalize.css" as="style">
+    <link href="static/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Proyecto Final [CLIENTE]</title>
+    <!-- Nuestro CSS -->
+    <link rel="preload" href="static/styles.css" as="style">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Proyecto Final <span>David Padilla Muñoz</span></h1>
+    </header>
+
+    <section class="superior">
+        <section class="volver">
+            <div class="retorno">
+                <a class="boton-retorno salir" href="/logout">Salir</a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-off" 
+                width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M14.274 10.291a4 4 0 1 0 -5.554 -5.58m-.548 3.453a4.01 4.01 0 0 0 2.62 2.65" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 1.147 .167m2.685 2.681a4 4 0 0 1 .168 1.152v2" />
+                    <line x1="3" y1="3" x2="21" y2="21" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="contenido-superior">
+                <div class="carrito">
+                    <a class="boton-carrito" href="/carrito">Mi carrito</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" 
+                    width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DFE9F3" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="6" cy="19" r="2" />
+                        <circle cx="17" cy="19" r="2" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                    </svg>
+                </div>
+
+                <div class="perfil">
+                    <a onclick="return confirm('Esta seguro de eliminar su perfil? ESTO ELIMINARA TODOS LOS CLIENTES REGISTRADOS.')" class="boton-perfil" href="/eliminar_perfil">Borrar perfil</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eraser" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 19h-11l-4 -4a1 1 0 0 1 0 -1.41l10 -10a1 1 0 0 1 1.41 0l5 5a1 1 0 0 1 0 1.41l-9 9" />
+                        <line x1="18" y1="12.3" x2="11.7" y2="6" />
+                    </svg>
+                </div>
+        </section>
+    </section>
+
+    <div class="nav-bg">
+        <nav class="navegacion-ppal contenedor">
+            <a href="/cliente-impresoras">Impresoras</a>
+            <a href="/cliente-arduinos">Arduinos</a>
+            <a href="/cliente-raspberrys">Raspberry Pi 4</a>
+            <a href="/cliente-consolas">Consolas</a>
+        </nav>
+    </div>
+
+
+
+    <main class="contenedor_cliente sombra">
+        <h2>Nuestros Productos</h2>
+
+        <div class="productos">
+            <section class="product">
+                <h3>Electronica</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" 
+                    width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+                        <line x1="14.5" y1="5.5" x2="18.5" y2="9.5" />
+                        <polyline points="12 8 7 3 3 7 8 12" />
+                        <line x1="7" y1="8" x2="5.5" y2="9.5" />
+                        <polyline points="16 12 21 17 17 21 12 16" />
+                        <line x1="16" y1="17" x2="14.5" y2="18.5" />
+                    </svg>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida tortor mauris, at venenatis erat bibendum mollis.
+                    Phasellus in ligula odio.
+                    Ut blandit venenatis ex, vel dignissim massa suscipit non.
+                    In rutrum arcu ut mauris pulvinar, quis suscipit erat imperdiet.
+                    Morbi molestie sollicitudin varius.</p>
+            </section>
+
+            <section class="product">
+                <h3>Videojuegos</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple-arcade" 
+                    width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="5" r="2" />
+                        <path d="M20 12.5v4.75a0.734 .734 0 0 1 -.055 .325a0.704 .704 0 0 1 -.348 .366l-5.462 2.58a4.998 4.998 0 0 1 -4.27 0l-5.462 -2.58a0.705 .705 0 0 1 -.401 -.691l-.002 -4.75" />
+                        <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a0.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a0.691 .691 0 0 1 .028 -1.27z" />
+                        <line x1="12" y1="7" x2="12" y2="13" />
+                    </svg>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida tortor mauris, at venenatis erat bibendum mollis.
+                   Phasellus in ligula odio.
+                   Ut blandit venenatis ex, vel dignissim massa suscipit non.
+                   In rutrum arcu ut mauris pulvinar, quis suscipit erat imperdiet.
+                   Morbi molestie sollicitudin varius.</p>
+            </section>
+        </div> <!--.productos -->
+
+    </main>
+
+    <section class="contenedor-graficos sombra">
+        <div class="grafico_cliente">
+            <p>Historial de compras (€)</p>
+            <object data="{{image_url}}" type="image/svg+xml">
+            Tu navegador no soporta SVG
+            </object>
+        </div>
+    </section>
+
+    
+    <footer class="final">Todos los derechos reservados</footer>
+</body>
+</html>

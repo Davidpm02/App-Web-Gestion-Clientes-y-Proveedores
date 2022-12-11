@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="static/normalize.css" as="style">
+    <link href="static/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Proyecto Final [CONSOLAS]</title>
+    <!-- Nuestro CSS -->
+    <link rel="preload" href="static/styles.css" as="style">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="titulo"> Proyecto Final <span>David Padilla Muñoz</span></h1>
+    </header>
+
+    <main>
+        <section class="superior">
+
+            <section class="volver">
+                <div class="retorno">
+                    <a class="boton-retorno" href="/retorno-cliente">Volver</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="contenido-superior">
+                    <div class="carrito">
+                        <a class="boton-carrito" href="/carrito">Mi carrito</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" 
+                        width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DFE9F3" fill="none" 
+                        stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="6" cy="19" r="2" />
+                            <circle cx="17" cy="19" r="2" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M6 5l14 1l-1 7h-13" />
+                        </svg>
+                    </div>
+    
+                    <div class="perfil">
+                        <a onclick="return confirm('Esta seguro de eliminar su perfil? ESTO ELIMINARA TODOS LOS CLIENTES REGISTRADOS.')" class="boton-perfil" href="/eliminar_perfil">Borrar perfil</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eraser" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M19 19h-11l-4 -4a1 1 0 0 1 0 -1.41l10 -10a1 1 0 0 1 1.41 0l5 5a1 1 0 0 1 0 1.41l-9 9" />
+                            <line x1="18" y1="12.3" x2="11.7" y2="6" />
+                        </svg>
+                    </div>
+            </section>
+        </section>
+        
+        <section class="portada-consolas">
+            <div class="contenido-portada-consolas">
+
+                <h2 class="titulo">Consolas</h2>
+
+                <div class="logos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-gamepad" 
+                    width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                        <path d="M6 12h4m-2 -2v4" />
+                        <line x1="15" y1="11" x2="15" y2="11.01" />
+                        <line x1="18" y1="13" x2="18" y2="13.01" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <div class="contenedor">
+            <h2 class="titulo-ppal">Nuevos productos</h2>
+            <section  class="contenedor-productos">
+                <div class="producto">
+                    <img src="../static/imagenes/CONSOLAS/ps5.jpg" alt="" class="img__producto">
+                    <div class="descripcion_producto">
+                        <h3 class="titulo_producto">PlayStation 5</h3>
+                        <span class="precio_producto">599.95€</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo_carrito icon icon-tabler icon-tabler-shopping-cart-plus"
+                     width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                     stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="6" cy="19" r="2" />
+                        <circle cx="17" cy="19" r="2" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13" />
+                        <path d="M15 6h6m-3 -3v6" />
+                    </svg>
+                    <a class="btn-info-producto" href="/ps5">Ver detalles</a>
+                </div>
+
+                <div class="producto">
+                    <img src="../static/imagenes/CONSOLAS/switch.jpg" alt="" class="img__producto">
+                    <div class="descripcion_producto">
+                        <h3 class="titulo_producto">Nintendo Switch Oled</h3>
+                        <span class="precio_producto">349.95€</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo_carrito icon icon-tabler icon-tabler-shopping-cart-plus" 
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="6" cy="19" r="2" />
+                        <circle cx="17" cy="19" r="2" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13" />
+                        <path d="M15 6h6m-3 -3v6" />
+                    </svg>
+                    <a class="btn-info-producto" href="/switch">Ver detalles</a>
+                </div>
+
+                <div class="producto">
+                    <img src="../static/imagenes/CONSOLAS/xbox.jpg" alt="" class="img__producto">
+                    <div class="descripcion_producto">
+                        <h3 class="titulo_producto">Xbox Series X</h3>
+                        <span class="precio_producto">599.95€</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo_carrito icon icon-tabler icon-tabler-shopping-cart-plus" 
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="6" cy="19" r="2" />
+                        <circle cx="17" cy="19" r="2" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13" />
+                        <path d="M15 6h6m-3 -3v6" />
+                    </svg>
+                    <a class="btn-info-producto" href="/xbox">Ver detalles</a>
+                </div>
+
+                <div class="producto">
+                    <img src="../static/imagenes/CONSOLAS/steamdeck.jpg" alt="" class="img__producto">
+                    <div class="descripcion_producto">
+                        <h3 class="titulo_producto">Steam Deck 256gb</h3>
+                        <span class="precio_producto">799.95€</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo_carrito icon icon-tabler icon-tabler-shopping-cart-plus" 
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="6" cy="19" r="2" />
+                        <circle cx="17" cy="19" r="2" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13" />
+                        <path d="M15 6h6m-3 -3v6" />
+                    </svg>
+                    <a class="btn-info-producto" href="/steamdeck">Ver detalles</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="final">Todos los derechos reservados</footer>
+
+</body>
+</html>

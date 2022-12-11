@@ -1,0 +1,58 @@
+{% include 'suministros/header_suministros.html' %}
+
+
+</section>
+{% for item in con4 %}
+
+<div class="contenedor">
+    <h2 class="titulo-ppal">{{item[1] }}</h2>
+    <section class="contenedor-articulo">
+        <div class="articulo">
+            <img src="../static/imagenes/CONSOLAS/steamdeck.jpg" alt="" class="img_articulo">
+            <button class="boton-imagen steamdeck-1" value=""></button>
+            <button class="boton-imagen steamdeck-2" value=""></button>
+        </div>
+
+        <div class="precio-articulo">
+            <h3>{{item[2] }}</h3>
+        </div>
+
+        <div class="aniadir-carrito">
+            <a class="boton" href="/enviar stock/{{item[0] }}">Enviar Stock</a>
+        </div>
+
+        <section class="descripcion">
+            <h3 class="titulo-descripcion">Descripcion</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis fermentum gravida. 
+                Donec a augue a justo tincidunt tempor. Nam varius bibendum felis, a feugiat enim finibus quis. 
+                Morbi vestibulum imperdiet consequat. In ullamcorper sapien sit amet mollis faucibus.
+                 Nunc gravida nibh quis tellus ullamcorper, vel pretium massa venenatis. 
+                 Praesent finibus diam euismod ante auctor, sit amet consequat elit dignissim. Vestibulum dapibus varius euismod.
+                  Aenean purus quam, imperdiet ac porttitor vitae, sodales ut turpis.
+                   Pellentesque pulvinar quam massa, vel pellentesque nulla dignissim eu.
+            </p>
+
+            <p>
+                Morbi aliquet ante interdum tellus suscipit, non commodo leo iaculis.
+                 Vestibulum eget lorem in lacus rutrum mollis vel et nunc.
+                  Aliquam massa lorem, pharetra elementum venenatis non, rutrum eget nunc.
+                   Aliquam vel auctor risus. Donec mauris purus, ultrices quis sollicitudin ut, luctus at ipsum.
+                    Vestibulum ullamcorper, massa a feugiat rhoncus, metus metus elementum augue, vel maximus mi urna quis dui.
+                     Praesent tincidunt id ligula at suscipit. Etiam a tortor nec mauris tincidunt blandit.
+                      Quisque et interdum turpis, vitae auctor ante. Vivamus ut congue tellus.
+                       Ut consectetur augue sed suscipit lacinia.
+            </p>
+
+            <p> 
+                Praesent tempor massa quis imperdiet volutpat.
+                 Duis et aliquet tellus, in rhoncus justo. Curabitur maximus eu sapien vitae blandit.
+                  Mauris tristique rutrum est, eu aliquam ipsum posuere nec. In nec massa lacus.
+                   Integer scelerisque nisi at enim facilisis, in lacinia quam sollicitudin.
+                    Sed tincidunt condimentum leo sit amet tincidunt.
+
+            </p>
+        </section>
+    </section>
+</div>
+{% endfor %}
+{% include 'suministros/footer_suministros.html' %}

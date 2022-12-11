@@ -1,0 +1,65 @@
+{% include 'articulos/header2.html' %}
+
+Formulario para editar
+{% for articulo in articulos %}
+    
+<form method="post" action="/actualizar_articulo" enctype="multipart/form-data">
+    
+    <div class="card">
+        <div class="card-header">
+            Editar Articulo
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Datos del Articulo</h5>
+            <p class="card-text">
+                
+                <div class="form-group">
+                    <label for="txtNombre">Nombre:</label>
+                    <input id="txtNombre" value="{{ articulo[1] }}" class="form-control" type="text" name="txtNombre">
+                </div>
+                <div class="form-group">
+                    <label for="txtPrecio">Precio:</label>
+                    <input id="txtPrecio" value="{{ articulo[2] }}" class="form-control" type="text" name="txtPrecio">
+                </div>
+                <div class="form-group">
+                    <label for="txtIva">IVA:</label>
+                    <input id="txtIva" value="{{ articulo[3] }}" class="form-control" type="text" name="txtIva">
+                </div>
+                <div class="form-group">
+                    <label for="txtDescripcion">Descripcion:</label>
+                    <input id="txtDescripcion" value="{{ articulo[4] }}" class="form-control" type="text" name="txtDescripcion">
+                </div>
+                <div class="form-group">
+                    <label for="txtImage">Foto:</label>
+
+                    <img class="img-thumbnail" width="100" src="{{ url_for("uploads",nombreFoto=articulo[5]) }}" alt="">
+
+                    <input id="txtImage" class="form-control" type="file" name="txtImage">
+                </div>
+                <div class="form-group">
+                    <label for="txtCategoriaId">CategoriaId:</label>
+                    <input id="txtCategoriaId" value="{{ articulo[7] }}" class="form-control" type="text" name="txtCategoriaId">
+                </div>
+                <input type="hidden" value="{{ articulo[0] }}" name="txtID" id="txtID">
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Editar">
+                    <a href="{{ url_for("articulos_inicio") }}" class="btn btn-primary">Volver</a>
+                </div>
+
+                
+               
+                
+
+            </form>
+
+
+
+
+            </p>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% include 'articulos/footer2.html' %}

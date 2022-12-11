@@ -1,0 +1,58 @@
+{% include 'header_carrito.html' %}
+<br>
+{% with messages= get_flashed_messages() %}
+
+    {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for message in  messages %}
+                {{ message }}
+            {% endfor %}    
+        </div>
+    {% endif %}
+
+    {% endwith %}
+        
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Unidades</th>
+                    <th>Precio Total</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in articulos %}
+                <tr>
+                    <td>
+                        <img clas="img-thumbnail" width="100" src="uploads/{{c[4] }}" alt="">
+                    </td>
+                    <td>{{c[1] }}</td>
+                    <td>{{c[2] }}&nbsp;€</td>
+                    <td>{{c[5] }}</td>
+                    <td>{{c[6] }}&nbsp;€</td>
+                    <td>
+                        <a onclick="return confirm(' Eliminar el articulo del carrito?')" class="btn btn-danger" href="/eliminar_articulo_pedido/{{c[0] }}">Eliminar</a>
+                    </td>
+                </tr>
+                
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        {% for p in precio_total %}
+        <div data-name="Subtotals" class="a-row a-spacing-mini sc-subtotal sc-subtotal-activecart sc-java-remote-feature total_pedido">
+            <span id="sc-subtotal-label-activecart" class="a-size-medium sc-number-of-items">Subtotal:</span>
+            <span id="sc-subtotal-amount-activecart" class="a-color-price sc-price-container a-text-bold">&nbsp;<span class="a-size-medium a-color-base sc-price sc-white-space-nowrap">{{p}}&nbsp;€</span></span>       
+            </div>
+        {% endfor %}
+        <a href="/tramitarPedido" class="btn_tramitar_pedido btn btn-success">
+
+            Tramitar Pedido
+    
+        </a>
+
+
+{% include 'footer_carrito.html' %}

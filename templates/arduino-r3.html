@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="static/normalize.css" as="style">
+    <link href="static/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Proyecto Final [Ender-6 Corexy]</title>
+    <!-- Nuestro CSS -->
+    <link rel="preload" href="static/styles.css" as="style">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="titulo"> Proyecto Final <span>David Padilla Muñoz</span></h1>
+    </header>
+
+    <main>
+        <section class="superior">
+
+            <section class="volver">
+                <div class="retorno">
+                    <a class="boton-retorno" href="/arduinos">Volver</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back" 
+                    width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="contenido-superior">
+                    <div class="carrito">
+                        <a class="boton-carrito" href="/carrito">Mi carrito</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" 
+                        width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DFE9F3" fill="none" 
+                        stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="6" cy="19" r="2" />
+                            <circle cx="17" cy="19" r="2" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M6 5l14 1l-1 7h-13" />
+                        </svg>
+                    </div>
+    
+                    <div class="perfil">
+                        <a onclick="return confirm('Esta seguro de eliminar su perfil? ESTO ELIMINARA TODOS LOS CLIENTES REGISTRADOS.')" class="boton-perfil" href="/eliminar_perfil">Borrar perfil</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eraser" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M19 19h-11l-4 -4a1 1 0 0 1 0 -1.41l10 -10a1 1 0 0 1 1.41 0l5 5a1 1 0 0 1 0 1.41l-9 9" />
+                            <line x1="18" y1="12.3" x2="11.7" y2="6" />
+                        </svg>
+                    </div>
+            </section>
+        </section>
+        {% for item in ard1 %}
+        
+        <div class="contenedor">
+            <h2 class="titulo-ppal">{{item[1] }}</h2>
+            <section class="contenedor-articulo">
+                <div class="articulo">
+                    <img src="../static/imagenes/ARDUINO/arduino-unor3.jpg" alt="" class="img_articulo">
+                    <button class="boton-imagen arduinor3" value=""></button>
+                    
+                </div>
+
+                <div class="precio-articulo">
+                    <h3>{{item[2] }}&nbsp;€</h3>
+                </div>
+
+                <div class="aniadir-carrito">
+                    <a class="boton" href="/agregar/{{item[0] }}">Añadir al carrito</a>
+                </div>
+
+                <section class="descripcion">
+                    <h3 class="titulo-descripcion">Descripcion</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis fermentum gravida. 
+                        Donec a augue a justo tincidunt tempor. Nam varius bibendum felis, a feugiat enim finibus quis. 
+                        Morbi vestibulum imperdiet consequat. In ullamcorper sapien sit amet mollis faucibus.
+                         Nunc gravida nibh quis tellus ullamcorper, vel pretium massa venenatis. 
+                         Praesent finibus diam euismod ante auctor, sit amet consequat elit dignissim. Vestibulum dapibus varius euismod.
+                          Aenean purus quam, imperdiet ac porttitor vitae, sodales ut turpis.
+                           Pellentesque pulvinar quam massa, vel pellentesque nulla dignissim eu.
+                    </p>
+
+                    <p>
+                        Morbi aliquet ante interdum tellus suscipit, non commodo leo iaculis.
+                         Vestibulum eget lorem in lacus rutrum mollis vel et nunc.
+                          Aliquam massa lorem, pharetra elementum venenatis non, rutrum eget nunc.
+                           Aliquam vel auctor risus. Donec mauris purus, ultrices quis sollicitudin ut, luctus at ipsum.
+                            Vestibulum ullamcorper, massa a feugiat rhoncus, metus metus elementum augue, vel maximus mi urna quis dui.
+                             Praesent tincidunt id ligula at suscipit. Etiam a tortor nec mauris tincidunt blandit.
+                              Quisque et interdum turpis, vitae auctor ante. Vivamus ut congue tellus.
+                               Ut consectetur augue sed suscipit lacinia.
+                    </p>
+
+                    <p> 
+                        Praesent tempor massa quis imperdiet volutpat.
+                         Duis et aliquet tellus, in rhoncus justo. Curabitur maximus eu sapien vitae blandit.
+                          Mauris tristique rutrum est, eu aliquam ipsum posuere nec. In nec massa lacus.
+                           Integer scelerisque nisi at enim facilisis, in lacinia quam sollicitudin.
+                            Sed tincidunt condimentum leo sit amet tincidunt.
+
+                    </p>
+                </section>
+            </section>
+
+        </div>
+
+        {% endfor %}
+    
+    </main>
+    </div>
+
+        <footer class="final">Todos los derechos reservados</footer>
+</body>
+</html>

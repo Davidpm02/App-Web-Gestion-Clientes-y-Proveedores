@@ -1,0 +1,77 @@
+
+    {% include 'articulos/header2.html' %}
+    
+    {% with messages= get_flashed_messages() %}
+
+    {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for message in  messages %}
+                {{ message }}
+            {% endfor %}    
+        </div>
+    {% endif %}
+
+    {% endwith %}
+<br>
+    <section class="superior">
+
+        <section class="volver">
+            <div class="retorno">
+                <a class="btn btn-primary" href="/admin">Volver</a>
+            </div>
+        </section>
+    </section>
+    <br>
+
+    <a href="{{ url_for('crearArticulo') }}" class="btn btn-success">
+
+        Introducir nuevo articulo
+
+    </a>
+    <br>
+    <br>
+
+
+
+
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>PVP</th>
+                <th>Coste</th>
+                <th>IVA</th>
+                <th>Descripcion</th>
+                <th>Imagen</th>
+                <th>Stock</th>
+                <th>CategoriaId</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for articulo in articulos %}
+            <tr>
+                <td>{{ articulo[0] }}</td>
+                <td>{{ articulo[1] }}</td>
+                <td>{{ articulo[2] }}&nbsp;€</td>
+                <td>{{ articulo[8] }}&nbsp;€</td>
+                <td>{{ articulo[3] }}</td>
+                <td>{{ articulo[4] }}</td>
+                <td>
+                    <img class="img-thumbnail" width="100" src="uploads/{{ articulo[5] }}" alt="">
+                </td>
+
+                <td>{{ articulo[6] }}</td>
+                <td>{{ articulo[7] }}</td>
+                <td> <a class="btn btn-warning" href="/editar_articulo/{{ articulo[0] }}">Editar</a> | 
+                     <a onclick="return confirm('Desea borrar el articulo?')" class="btn btn-danger" href="/borrar_articulo/{{ articulo[0] }}">Eliminar</a> |
+                     <a onclick="return confirm('Desea solicitar nuevo stock?')" class="btn btn-primary" href="/solicitar_stock/{{ articulo[0] }}">Solicitar Stock</a>
+                 </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+    {% include 'articulos/footer2.html' %}

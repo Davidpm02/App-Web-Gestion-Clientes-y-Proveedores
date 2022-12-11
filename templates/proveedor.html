@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es" class="proveedor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="static/normalize.css" as="style">
+    <link href="static/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Proyecto Final [PROVEEDOR]</title>
+    <!-- Nuestro CSS -->
+    <link rel="preload" href="static/styles.css" as="style">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+<body class="proveedor">
+    <header>
+        <h1 class="titulo">Proyecto Final <span>David Padilla Muñoz</span></h1>
+    </header>
+    <main>
+
+        <section class="superior">
+            <section class="volver">
+                <div class="retorno alinear_derecha">
+                    <a class="boton-retorno salir" href="/logout">Salir</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-off" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14.274 10.291a4 4 0 1 0 -5.554 -5.58m-.548 3.453a4.01 4.01 0 0 0 2.62 2.65" />
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 1.147 .167m2.685 2.681a4 4 0 0 1 .168 1.152v2" />
+                        <line x1="3" y1="3" x2="21" y2="21" />
+                    </svg>
+                </div>
+            </section>
+        
+            <section class="contenido-superior">
+                <div class="perfil">
+                    <a onclick="return confirm('Esta seguro de eliminar su perfil? ESTO ELIMINARA TODOS LOS PROVEEDORES REGISTRADOS.')" class="boton-perfil" href="/eliminar_perfil_proveedor">Borrar perfil</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eraser" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 19h-11l-4 -4a1 1 0 0 1 0 -1.41l10 -10a1 1 0 0 1 1.41 0l5 5a1 1 0 0 1 0 1.41l-9 9" />
+                        <line x1="18" y1="12.3" x2="11.7" y2="6" />
+                    </svg>
+                </div>
+            </section>
+        </section>  
+
+        {% with messages= get_flashed_messages() %}
+
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in  messages %}
+                    {{ message }}
+                {% endfor %}    
+            </div>
+        {% endif %}
+
+        {% endwith %}
+
+        <div class="btn_solicitudes">
+            <label class="titulo-pedido">Solicitudes Articulos</label>
+            <div>
+                <a  class=btn-pedido href="/solicitudes_proveedor">Consultar solicitudes</a>
+            </div>
+        </div>
+
+        <section class="container">
+                <div class="parte-pedidos">
+                    <label class="titulo-pedido">Impresoras</label>
+                    <div>
+                        <a  class=btn-pedido href="/pedidos_impresoras">Consultar articulos</a>
+                    </div>
+                </div>
+    
+                <div class="parte-pedidos">
+                    <label class="titulo-pedido">Arduinos</label>
+                    <div>
+                        <a  class=btn-pedido href="/pedidos_arduinos">Consultar articulos</a>
+                    </div>
+                </div>
+    
+                <div class="parte-pedidos">
+                    <label class="titulo-pedido">Raspberrys</label>
+                    <div>
+                        <a  class=btn-pedido href="/pedidos_raspberrys">Consultar articulos</a>
+                    </div>
+                </div>
+    
+                <div class="parte-pedidos">
+                    <label class="titulo-pedido">Consolas</label>
+                    <div>
+                        <a  class=btn-pedido href="/pedidos_consolas">Consultar articulos</a>
+                    </div>
+                </div>
+        </section> <!-- .container -->
+
+        <section class="contenedor-graficos sombra">
+            <div class="grafico_cliente">
+                <p>Ingresos de pedidos de empresas (€)</p>
+                <object data="{{ganancias_url}}" type="image/svg+xml">
+                Tu navegador no soporta SVG
+                </object>
+            </div>
+
+            <div class="grafico_cliente">
+                <p>Gastos en costes de Produccion (€)</p>
+                <object data="{{perdidas_url}}" type="image/svg+xml">
+                Tu navegador no soporta SVG
+                </object>
+            </div>
+    </section>
+
+    </main>
+    
+
+</body>
+</html>

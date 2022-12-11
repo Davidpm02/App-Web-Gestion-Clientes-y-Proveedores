@@ -1,0 +1,70 @@
+{% include 'articulos/header2.html' %}
+
+{% with messages= get_flashed_messages() %}
+
+{% if messages %}
+    <div class="alert alert-danger" role="alert">
+        {% for message in  messages %}
+            {{ message }}
+        {% endfor %}    
+    </div>
+{% endif %}
+
+{% endwith %}
+
+
+<br>
+<form method="post" action="/store_articulo" enctype="multipart/form-data">
+    
+    <div class="card">
+        <div class="card-header">
+            Introducir un articulo
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Datos del articulo</h5>
+            <p class="card-text">
+
+            <div class="form-group">
+                <label for="txtNombre">Nombre:</label>
+                <input id="txtNombre" class="form-control" type="text" name="txtNombre">
+            </div>
+            <div class="form-group">
+                <label for="txtPrecio">Precio:</label>
+                <input id="txtPrecio" class="form-control" type="text" name="txtPrecio">
+            </div>
+            <div class="form-group">
+                <label for="txtIva">IVA:</label>
+                <input id="txtIva" class="form-control" type="text" name="txtIva">
+            </div>
+            <div class="form-group">
+                <label for="txtDescripcion">Descripcion:</label>
+                <input id="txtDescripcion" class="form-control" type="text" name="txtDescripcion">
+            </div>
+            <div class="form-group">
+                <label for="txtImage">Imagen:</label>
+                <input id="txtImage" class="form-control" type="file" name="txtImage">
+            </div>
+
+            <div class="form-group">
+                <label for="txtStock">Stock:</label>
+                <input id="txtStock" class="form-control" type="text" name="txtStock">
+            </div>
+
+            <div class="form-group">
+                <label for="txtCategoriaId">CategoriaId:</label>
+                <input id="txtCategoriaId" class="form-control" type="text" name="txtCategoriaId">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Agregar">
+                <a href="{{ url_for('articulos_inicio') }}" class="btn btn-primary">Volver</a>
+            </div>
+
+            </form>
+
+
+            </p>
+        </div>
+    </div>
+
+
+{% include 'articulos/footer2.html' %}

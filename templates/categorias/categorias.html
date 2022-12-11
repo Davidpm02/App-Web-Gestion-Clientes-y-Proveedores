@@ -1,0 +1,35 @@
+    {% include 'categorias/header.html' %}
+    <br/>
+    <a href="{{ url_for('crear_categoria') }}" class="btn btn-success">
+
+        Ingresar nueva Categoria
+
+    </a>
+    <br>
+    <br>
+
+    <main>
+
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for categoria in categorias %}
+                <tr>
+                    <td>{{categoria[0] }}</td>
+                    <td>{{categoria[1] }}</td>
+                    <td> <a class="btn btn-warning" href="/editar_categoria/{{categoria[0] }}">Editar</a> | 
+                        <a onclick="return confirm('Desea borrar la categoria? No se recomienda borrar las categorias predefinidas.')" class="btn btn-danger" href="/borrar_categoria/{{categoria[0] }}">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </main>
+{% include 'categorias/footer.html' %}
